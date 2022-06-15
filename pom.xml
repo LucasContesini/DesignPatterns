@@ -12,7 +12,7 @@
 	<artifactId>DesignPatterns</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DesignPatterns</name>
-	<description>Projeto to study design patterns</description>
+	<description>Project to study design patterns</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
