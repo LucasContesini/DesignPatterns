@@ -1,4 +1,4 @@
-package com.contesini.DesignPatterns;
+package com.contesini.designpatterns;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
