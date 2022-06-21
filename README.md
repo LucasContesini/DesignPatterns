@@ -44,3 +44,26 @@ Use this pattern:
 
 #### Cons
 * The code may become more complicated than it should be
+
+
+### Singleton
+
+#### Definition
+Singleton is a pattern that ensure that a class has only one instance, while providing a global access point to this instance.
+![Singleton](src/main/resources/static/Singleton.png)
+
+#### Usage
+Use this pattern:
+* When a class in your program should have just a single instance available to all clients. Example: Database object
+* When you need stricter control over global variables
+
+#### Pros
+* You can be sure a class has only a single instance
+* You gain a global access point to that instance
+* The singleton object is initialized only when it’s requested for the first time
+
+#### Cons
+* Violates the Single Responsibility Principle. Ensuring that a class has just a single instance and providing a global access point to that instance
+* This pattern can mask bad design, for instance, when the components of the program know too much about each other
+* The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times
+* It may be difficult to create unit test of the Singleton
