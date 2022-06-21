@@ -37,9 +37,8 @@ public class AbstractFactoryApplication {
 
   private static UserChoice getUserChoice() {
     var choices =  List.of(UserChoice.values());
-    var random = new Random();
 
-    return choices.get(random.nextInt(choices.size()));
+    return choices.get(new Random().nextInt(choices.size()));
   }
 
 }
