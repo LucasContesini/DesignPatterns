@@ -87,3 +87,23 @@ Use this pattern:
 
 #### Cons
 * The code may become more complicated than it should be
+
+
+### Prototype
+
+#### Definition
+Prototype is a pattern that lets you copy existing objects without making your code dependent on their classes.
+![Prototype](src/main/resources/static/Prototype.png)
+
+#### Usage
+Use this pattern:
+* When your code shouldn’t depend on the concrete classes of objects that you need to copy
+
+#### Pros
+* You can clone objects without coupling to their concrete classes
+* You can get rid of repeated initialization code in favor of cloning pre-built prototypes
+* You can produce complex objects more conveniently
+* You get an alternative to inheritance when dealing with a configuration presets for complex objects
+
+#### Cons
+* Cloning complex objects that have circular references might be difficult to handle
