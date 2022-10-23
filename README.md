@@ -67,3 +67,23 @@ Use this pattern:
 * This pattern can mask bad design, for instance, when the components of the program know too much about each other
 * The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times
 * It may be difficult to create unit test of the Singleton
+
+
+### Builder
+
+#### Definition
+Builder is a pattern that lets you construct complex objects step by step.
+![Builder](src/main/resources/static/Builder.png)
+
+#### Usage
+Use this pattern:
+* When you need to construct composite objects
+* When you want to get rid of a giant constructor
+
+#### Pros
+* You can create objects step-by-step
+* You can reuse the same constructor to build objects
+* Complies with the Single Responsibility Principle, because you can isolate complex construction code from the business logic
+
+#### Cons
+* The code may become more complicated than it should be
