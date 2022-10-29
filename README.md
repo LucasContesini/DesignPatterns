@@ -5,6 +5,7 @@ Project with examples of design patterns.
 ## Creational Patterns
 Design patterns that deal with object creation. 
 
+
 ### Abstract Factory
 
 #### Definition
@@ -107,3 +108,26 @@ Use this pattern:
 
 #### Cons
 * Cloning complex objects that have circular references might be difficult to handle
+
+
+## Structural Patterns
+Design patterns that work as a blueprint of how different objects and classes are combined to form a bigger structure for achieving multiple goals altogether. 
+
+
+### Adapter
+
+#### Definition
+Adapter is a pattern that allows objects with incompatible interfaces to collaborate.
+![Adapter](src/main/resources/static/Adapter.png)
+
+#### Usage
+Use this pattern:
+* When you want to use some existing class, but its interface isn’t compatible with the rest of your code
+* When you want to reuse several existing subclasses that lack some common functionality that can’t be added to the superclass
+
+#### Pros
+* Complies with the Single Responsibility Principle, because you can separate the interface or data conversion code from the primary business logic of the program
+* Complies with the Open/Closed Principle, because you can introduce new types of adapters without breaking the existing client code
+
+#### Cons
+* The code may become more complicated than it should be
