@@ -131,3 +131,25 @@ Use this pattern:
 
 #### Cons
 * The code may become more complicated than it should be
+
+
+### Bridge
+
+#### Definition
+Bridge is a pattern that lets you split a large class, or a set of closely related classes into two separate hierarchies: abstraction (interface) and implementation (platform), which can be developed independently of each other.
+![Bridge](src/main/resources/static/Bridge.png)
+![Bridge2](src/main/resources/static/Bridge-2.png)
+
+#### Usage
+Use this pattern:
+* When you want to divide and organize a monolithic class that has several variants of some functionality
+* When you need to be able to switch implementations at runtime
+
+#### Pros
+* You can create platform-independent classes and apps
+* The client code works with high-level abstractions. It isn’t exposed to the platform details
+* Complies with the Single Responsibility Principle, because you can focus on high-level logic in the abstraction and on platform details in the implementation
+* Complies with the Open/Closed Principle, because you can introduce new abstractions and implementations independently of each other
+
+#### Cons
+* The code may become more complicated than it should be
