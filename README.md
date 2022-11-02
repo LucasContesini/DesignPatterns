@@ -180,6 +180,7 @@ Use this pattern:
 #### Definition
 Decorator is a pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 ![Decorator](src/main/resources/static/Decorator.png)
+![Decorator2](src/main/resources/static/Decorator-2.png)
 
 #### Usage
 Use this pattern:
