@@ -172,3 +172,28 @@ Use this pattern:
 
 #### Cons
 *  It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend
+
+
+
+### Decorator
+
+#### Definition
+Decorator is a pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+![Decorator](src/main/resources/static/Decorator.png)
+![Decorator2](src/main/resources/static/Decorator-2.png)
+
+#### Usage
+Use this pattern:
+* When you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses these objects
+* When it’s awkward or not possible to extend an object’s behavior using inheritance
+
+#### Pros
+* You can extend an object’s behavior without making a new subclass
+* You can add or remove responsibilities from an object at runtime
+* You can combine several behaviors by wrapping an object into multiple decorators
+* Complies with the Single Responsibility Principle, because you can divide a monolithic class that implements many possible variants of behavior into several smaller classes
+
+#### Cons
+* It’s hard to remove a specific wrapper from the wrappers stack
+* It’s hard to implement a decorator in such a way that its behavior doesn't depend on the order in the decorators stack
+* The initial configuration code of layers might look pretty ugly
