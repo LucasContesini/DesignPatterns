@@ -174,7 +174,6 @@ Use this pattern:
 *  It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend
 
 
-
 ### Decorator
 
 #### Definition
@@ -197,3 +196,21 @@ Use this pattern:
 * It’s hard to remove a specific wrapper from the wrappers stack
 * It’s hard to implement a decorator in such a way that its behavior doesn't depend on the order in the decorators stack
 * The initial configuration code of layers might look pretty ugly
+
+
+### Facade
+
+#### Definition
+Facade is a pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.
+![Facade](src/main/resources/static/Facade.png)
+
+#### Usage
+Use this pattern:
+* When you need to have a limited but straightforward interface to a complex subsystem
+* When you want to structure a subsystem into layers
+
+#### Pros
+* You can isolate your code from the complexity of a subsystem
+
+#### Cons
+* A facade can become a god object coupled to all classes of an app
