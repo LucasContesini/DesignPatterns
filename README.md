@@ -214,3 +214,21 @@ Use this pattern:
 
 #### Cons
 * A facade can become a god object coupled to all classes of an app
+
+
+### Flyweight
+
+#### Definition
+Flyweight is a pattern that lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all the data in each object.
+![Flyweight](src/main/resources/static/Flyweight.png)
+
+#### Usage
+Use this pattern:
+* Only when your program must support a huge number of objects which barely fit into available RAM
+
+#### Pros
+* You can save lots of RAM, assuming your program has tons of similar objects
+
+#### Cons
+* You might be trading RAM over CPU cycles when some context data needs to be recalculated each time somebody calls a flyweight method
+* The code may become more complicated than it should be
