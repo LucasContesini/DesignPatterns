@@ -258,3 +258,27 @@ Use this pattern:
 #### Cons
 * The response from the service might get delayed
 * The code may become more complicated than it should be
+
+
+## Behavioral Patterns
+Patterns that are concerned with algorithms and the assignment of responsibilities between objects.
+
+### Chain of Responsibility
+
+#### Definition
+Chain of Responsibility is a pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+![Chain Of Responsibility](src/main/resources/static/ChainOfResponsibility.png)
+
+#### Usage
+Use this pattern:
+* When your program is expected to process different kinds of requests in various ways, but the exact types of requests and their sequences are unknown beforehand
+* When it’s essential to execute several handlers in a particular order
+* When the set of handlers and their order are supposed to change at runtime
+
+#### Pros
+* You can control the order of request handling
+* Complies with the Single Responsibility Principle, because you can decouple classes that invoke operations from classes that perform operations
+* Complies with the Open/Closed Principle, because you can introduce new handlers into the app without breaking the existing client code
+
+#### Cons
+* Some requests may end up unhandled
