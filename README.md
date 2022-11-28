@@ -282,3 +282,27 @@ Use this pattern:
 
 #### Cons
 * Some requests may end up unhandled
+
+
+
+### Command
+
+#### Definition
+Command is a pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request’s execution, and support undoable operations.
+![Command](src/main/resources/static/Command.png)
+
+#### Usage
+Use this pattern:
+* When you want to parametrize objects with operations
+* When you want to queue operations, schedule their execution, or execute them remotely
+* When you want to implement reversible operations
+
+#### Pros
+* You can implement undo/redo
+* You can implement deferred execution of operations
+* You can assemble a set of simple commands into a complex one
+* Complies with the Single Responsibility Principle, because you can decouple classes that invoke operations from classes that perform these operations
+* Complies with the Open/Closed Principle, because you can introduce new commands into the app without breaking existing client code
+
+#### Cons
+* The code may become more complicated than it should be
