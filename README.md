@@ -306,3 +306,26 @@ Use this pattern:
 
 #### Cons
 * The code may become more complicated than it should be
+
+
+### Iterator
+
+#### Definition
+Iterator is a pattern that lets you traverse elements of a collection without exposing its underlying representation.
+![Iterator](src/main/resources/static/Iterator.png)
+
+#### Usage
+Use this pattern:
+* When your collection has a complex data structure under the hood, but you want to hide its complexity from clients
+* When you want to reduce duplication of the traversal code across your app
+* When you want your code to be able to traverse different data structures or when types of these structures are unknown beforehand
+
+#### Pros
+* You can iterate over the same collection in parallel because each iterator object contains its own iteration state
+* You can delay an iteration and continue it when needed
+* Complies with the Single Responsibility Principle, because you can clean up the client code and the collections by extracting bulky traversal algorithms into separate classes
+* Complies with the Open/Closed Principle, because you can implement new types of collections and iterators and pass them to existing code without breaking anything
+
+#### Cons
+* Applying the pattern can be an overkill if your app only works with simple collections
+* Using an iterator may be less efficient than going through elements of some specialized collections directly
