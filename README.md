@@ -376,3 +376,23 @@ Use this pattern:
 * The app might consume lots of RAM if clients create mementos too often
 * Caretakers should track the originator’s lifecycle to be able to destroy obsolete mementos
 * Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched
+
+
+
+### Observer
+
+#### Definition
+Observer is a pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+![Observer](src/main/resources/static/Observer.png)
+
+#### Usage
+Use this pattern:
+* When changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically
+* When some objects in your app must observe others, but only for a limited time or in specific cases
+
+#### Pros
+* You can establish relations between objects at runtime
+* Complies with the Open/Closed Principle, because you can  introduce new subscriber classes without having to change the publisher’s code
+
+#### Cons
+* Subscribers are notified in random order
