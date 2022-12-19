@@ -392,7 +392,28 @@ Use this pattern:
 
 #### Pros
 * You can establish relations between objects at runtime
-* Complies with the Open/Closed Principle, because you can  introduce new subscriber classes without having to change the publisher’s code
+* Complies with the Open/Closed Principle, because you can introduce new subscriber classes without having to change the publisher’s code
 
 #### Cons
 * Subscribers are notified in random order
+
+
+### State
+
+#### Definition
+State is a pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed it's class.
+![State](src/main/resources/static/State.png)
+
+#### Usage
+Use this pattern:
+* When you have an object that behaves differently depending on its current state, the number of states is enormous, and the state-specific code changes frequently
+* When you have a class polluted with massive conditionals that alter how the class behaves according to the current values of the class’s fields
+* When you have a lot of duplicate code across similar states and transitions of a condition-based state machine
+
+#### Pros
+* Simplify the code of the context by eliminating bulky state machine conditionals
+* Complies with the Single Responsibility Principle, because you can organize the code related to particular states into separate classes
+* Complies with the Open/Closed Principle, because you can introduce new states without changing existing state classes or the context
+
+#### Cons
+* Applying the pattern can be overkill if a state machine has only a few states or rarely changes
