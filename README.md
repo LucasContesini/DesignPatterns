@@ -442,3 +442,25 @@ Use this pattern:
 * If you only have a couple of algorithms, and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern
 * Clients must be aware of the differences between strategies to be able to select a proper one
 * A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces
+
+
+### Visitor
+
+#### Definition
+Visitor is a pattern that lets you separate algorithms from the objects on which they operate.
+![Visitor](src/main/resources/static/Visitor.png)
+
+#### Usage
+Use this pattern:
+* When you need to perform an operation on all elements of a complex object structure (for example, an object tree)
+* To clean up the business logic of auxiliary behaviors
+* When a behavior makes sense only in some classes of a class hierarchy, but not in others
+
+#### Pros
+* A visitor object can accumulate some useful information while working with various objects. This might be handy when you want to traverse some complex object structure, such as an object tree, and apply the visitor to each object of this structure
+* Complies with the Open/Closed Principle, because you can introduce a new behavior that can work with objects of different classes without changing these classes
+* Complies with the Single Responsibility Principle, because you move multiple versions of the same behavior into the same class
+
+#### Cons
+* You need to update all visitors each time a class gets added to or removed from the element hierarchy
+* Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with
