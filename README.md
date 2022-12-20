@@ -463,3 +463,25 @@ Use this pattern:
 * Some clients may be limited by the provided skeleton of an algorithm
 * You might violate the Liskov Substitution Principle by suppressing a default step implementation via a subclass
 * Template methods tend to be harder to maintain the more steps they have
+
+
+### Visitor
+
+#### Definition
+Visitor is a pattern that lets you separate algorithms from the objects on which they operate.
+![Visitor](src/main/resources/static/Visitor.png)
+
+#### Usage
+Use this pattern:
+* When you need to perform an operation on all elements of a complex object structure (for example, an object tree)
+* To clean up the business logic of auxiliary behaviors
+* When a behavior makes sense only in some classes of a class hierarchy, but not in others
+
+#### Pros
+* A visitor object can accumulate some useful information while working with various objects. This might be handy when you want to traverse some complex object structure, such as an object tree, and apply the visitor to each object of this structure
+* Complies with the Open/Closed Principle, because you can introduce a new behavior that can work with objects of different classes without changing these classes
+* Complies with the Single Responsibility Principle, because you move multiple versions of the same behavior into the same class
+
+#### Cons
+* You need to update all visitors each time a class gets added to or removed from the element hierarchy
+* Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with
