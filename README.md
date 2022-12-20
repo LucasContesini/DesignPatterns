@@ -444,6 +444,27 @@ Use this pattern:
 * A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces
 
 
+### Template Method
+
+#### Definition
+Template Method is a pattern that defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+![Template Method](src/main/resources/static/TemplateMethod.png)
+
+#### Usage
+Use this pattern:
+* When you want to let clients extend only particular steps of an algorithm, but not the whole algorithm or its structure
+* When you have several classes that contain almost identical algorithms with some minor differences. As a result, you might need to modify all classes when the algorithm changes
+
+#### Pros
+* You can let clients override only certain parts of a large algorithm, making them less affected by changes that happen to other parts of the algorithm
+* You can pull the duplicate code into a superclass
+
+#### Cons
+* Some clients may be limited by the provided skeleton of an algorithm
+* You might violate the Liskov Substitution Principle by suppressing a default step implementation via a subclass
+* Template methods tend to be harder to maintain the more steps they have
+
+
 ### Visitor
 
 #### Definition
